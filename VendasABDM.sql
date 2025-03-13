@@ -93,24 +93,3 @@ create table Itens_Pedidos (
 	primary key(pedidoId, produtoId)
 )
 go
-
--- Verificar se as tabelas estão sem informação
--- Consulta de todos os dados da tabela Pessoas
-select * from Pessoas
--- Consulta de todos os dados da tabela Clientes
-select * from Clientes
--- Consulta de todos os dados da tabela Vendedores
-select * from Vendedores
--- Consulta de todos os dados da tabela Pedidos
-select * from Pedidos
--- Consulta de todos os dados da tabela Produtos
-select * from Produtos
--- Consulta de todos os dados da tabela Itens_Pedidos
-select * from Itens_Pedidos
-
--- Inserir uma pessoa na tabela Pessoas
-insert into Pessoas (nome, cpf, status) values ('Valeria Maria Volpe', '111.111.111-11', 1)
-go
-
-insert into Pessoas (nome, cpf) values ('Joao Vitor', '222.222.222-22')
-go
