@@ -55,3 +55,74 @@ insert into Pessoas (nome, cpf, status) values
 ('Adriana Alvarenga Dezani', '202.202.202-02', 2)
 go 
 
+-- inserir dados na tabela Clientes (lembre-se que todo cliente é uma pessoa)
+insert into Clientes (pessoaId,  renda,  credito) values (1, 5000.00, 1500.00)
+go 
+
+insert into Clientes values (4, 3500.00,  1250.00)
+go 
+
+insert into Clientes (pessoaId, renda, credito) values 
+(5, 2500.00, 750.00),
+(1004, 7500.00, 2500.00),
+(1008, 1500.00, 750.00),
+(1005, 2500.00, 1000.00)
+go 
+
+-- consultar todas as pessoas que são clientes 
+select Pessoas.*, Clientes.* from Pessoas, Clientes where Pessoas.idPessoa = Clientes.pessoaId
+go 
+
+-- inserir dados na tabela Vendedores (lembre-se que todo vendedor é uma pessoa)
+insert into Vendedores (pessoaId, salario) values (2, 4500.00)
+go 
+
+insert into Vendedores (pessoaId, salario) values 
+(1003, 2520.00),
+(1007, 7500.00)
+go 
+
+-- consultar todas as pessoas que são vendedores 
+select Pessoas.*, Vendedores.* from Pessoas, Vendedores where. Pessoas.idPessoa = Vendedores.pessoaId
+go 
+
+-- inserir dados na tabela Produtos 
+insert into Produtos (descricao, qtd,  valor, status) values ('Bolo de chocolate', 50, 25.00, 1)
+go 
+
+insert into Produtos (descricao, qtd, valor) values ('Cotuba', 100, 5.5)
+go 
+
+insert into Produtos values ('Coxinha de frango', 500, 2.5, 1)
+go 
+
+insert into Produtos (descricao, qtd, valor, status) values 
+('Sorvete de creme', 25, 10.50, 1),
+('Paçoca', 30, 3.50, 2),
+('Suco de laranja', 40, 11.99, 1),
+('Carambola', 12, 6.50, 1),
+('Alface', 5, 4.50, 2),
+('Ovo de páscoa', 500, 85.99, 1),
+('Columba pascal', 100, 35.98, 1),
+('Chocolate ao leite', 250, 15.90, 1),
+('Chocolate 70%', 150, 8.50, null),
+('Amendoim salgado', 250, 4.30, 2),
+('Cenoura', 10, 9.80, 2),
+('Lanche natural', 15, 15.00, 1),
+('Tomate cereja', 40, 2.50, 1),
+('Ovo Caipira', 60, 12.50, 1),
+('Milho verde', 120, 6.50, null)
+go
+
+insert into Produtos values 
+('Doce de leite', 30, 4.59, 2),
+('Suco de uva', 25, 16.49, 1)
+go
+
+-- inserir dados na tabela Pedidos
+insert into Pedidos (data, status, vendedorId, clienteId) values ('2025-01-23', 1, 2, 1) 
+go
+
+insert into Pedidos (data, status, vendedorId, clienteId) values (GETDATE(), 1, 2, 1004) 
+go
+
